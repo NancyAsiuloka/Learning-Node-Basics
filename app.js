@@ -26,7 +26,7 @@
 //     }
 // }, 2000);
 
-
+console.log(__dirname);
 
 
 
