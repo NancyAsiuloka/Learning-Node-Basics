@@ -19,6 +19,6 @@
 var time = 0;
 
 setInterval(function(){
-    tme += 2;
+    time += 2;
     console.log(time + ' seconds have passed...');
 }, 2000);
