@@ -26,10 +26,28 @@
 //     }
 // }, 2000);
 
-console.log(__dirname);
+// console.log(__dirname);
+// console.log(__filename);
 
 
+// function callFunction(fun){
+//     fun();
+// }
 
+// function expression
+
+// var sayBye = function(){
+//     console.log('bye');
+// };
+
+// callFunction(sayBye);
+
+// Module.
+var logger = require ('./logger');
+
+console.log(logger.counter(['nancy', 'doris', 'gideon']));
+console.log(logger.adder(5, 8));
+console.log(logger.adder(logger.pi, 5));
 
 
 
