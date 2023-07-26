@@ -49,7 +49,7 @@
 // console.log(logger.adder(logger.pi, 5));
 
 
-var events = require ('events');
+// var events = require ('events');
 
 // var myEmitter = new events.EventEmitter();
 
@@ -59,6 +59,7 @@ var events = require ('events');
 
 // myEmitter.emit('someEvent', 'the event was emitted');
 
+var events = require ('events');
 var util = require('util');
 
 var Person = function(name){
