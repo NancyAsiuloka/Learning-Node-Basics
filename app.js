@@ -51,13 +51,23 @@
 
 var events = require ('events');
 
-var myEmitter = new events.EventEmitter();
+// var myEmitter = new events.EventEmitter();
 
-myEmitter.on('someEvent', (mssg) => {
-    console.log(mssg);
-});
+// myEmitter.on('someEvent', (mssg) => {
+//     console.log(mssg);
+// });
 
-myEmitter.emit('someEvent')
+// myEmitter.emit('someEvent', 'the event was emitted');
+
+var util = require('util');
+
+
+
+
+
+
+
+
 
 
 
