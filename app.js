@@ -49,7 +49,11 @@
 // console.log(logger.adder(logger.pi, 5));
 
 
-var logger = require ('./logger');
+var events = require ('events');
+
+var myEmitter = new events.EventEmitter();
+
+
 
 
 
