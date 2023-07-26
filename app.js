@@ -25,7 +25,6 @@
 //         clearInterval(timer);
 //     }
 // }, 2000);
-
 // console.log(__dirname);
 // console.log(__filename);
 
@@ -43,12 +42,14 @@
 // callFunction(sayBye);
 
 // Module.
+// var logger = require ('./logger');
+
+// console.log(logger.counter(['nancy', 'doris', 'gideon']));
+// console.log(logger.adder(5, 8));
+// console.log(logger.adder(logger.pi, 5));
+
+
 var logger = require ('./logger');
-
-console.log(logger.counter(['nancy', 'doris', 'gideon']));
-console.log(logger.adder(5, 8));
-console.log(logger.adder(logger.pi, 5));
-
 
 
 
