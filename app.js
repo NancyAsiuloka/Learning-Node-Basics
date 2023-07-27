@@ -99,7 +99,7 @@
 // });
 
 // CREATING &REMOVING DIRECTORIES oR FOLDER
-var fs = require('fs');
+// var fs = require('fs');
 
 // synchronous way of creating & removing directories
 // fs.mkdirSync('stuff');
@@ -107,8 +107,59 @@ var fs = require('fs');
 
 // Asynchronous way of creating&removing directories
 
+// New way to create a new file 1
+// const fs = require('fs');
+// const { promisify } = require('util');
+
+// const mkdirPromise = promisify(fs.mkdir);
+// const readFilePromise = promisify(fs.readFile);
+// const writeFilePromise = promisify(fs.writeFile);
+
+// (async function () {
+//   try {
+//     await mkdirPromise('stuff');
+//     const data = await readFilePromise('readMe.txt', 'utf8');
+//     await writeFilePromise('./stuff/writeMe.txt', data);
+//     console.log('File successfully created and data written.');
+//   } catch (err) {
+//     console.error('Error:', err);
+//   }
+// })();
 
 
+// Old way of doing things
+//  function createdFile(){
+//     fs.mkdir('stuff', async function () {
+//         await fs.readFile('readMe.txt', 'utf8', async function (_, data) {
+//             await fs.writeFile('./stuff/writeMe.txt', data);
+//       });
+//     });
+//  }
+
+
+// New way to create a new file 2
+// const fs = require('fs');
+
+// async function createDirectoryAndCopyFile() {
+//   try {
+//     // Create the 'stuff' directory
+//     await fs.promises.mkdir('stuff');
+
+//     // Read the contents of 'readMe.txt'
+//     const data = await fs.promises.readFile('readMe.txt', 'utf8');
+
+//     // Write the contents to 'writeMe.txt' inside the 'stuff' directory
+//     await fs.promises.writeFile('./stuff/writeMe.txt', data);
+
+//     console.log('File copied successfully!');
+//   } catch (err) {
+//     console.error('Error:', err.message);
+//   }
+// }
+
+// createDirectoryAndCopyFile();
+
+// removing directories asynchronously
 
 
 
