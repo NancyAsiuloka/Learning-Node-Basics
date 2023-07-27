@@ -161,6 +161,22 @@
 
 // removing directories asynchronously
 
+const fs = require('fs');
+
+fs.unlink('./stuff/writeMe.txt', function(err) {
+    if (err) {
+        console.error('Error deleting the file:', err);
+    } else {
+        fs.rmdir('stuff', function(err) {
+            if (err) {
+                console.error('Error removing the directory:', err);
+            } else {
+                console.log('File and directory deleted successfully.');
+            }
+        });
+    }
+});
+
 
 
 
