@@ -59,31 +59,41 @@
 
 // myEmitter.emit('someEvent', 'the event was emitted');
 
-var events = require ('events');
-var util = require('util');
+// var events = require ('events');
+// var util = require('util');
 
-var Person = function(name){
-    this.name = name;
-};
+// var Person = function(name){
+//     this.name = name;
+// };
 
-util.inherits(Person, events.EventEmitter);
+// util.inherits(Person, events.EventEmitter);
 
-var james = new Person('james');
-var nancy = new Person('nancy');
-var doris = new Person('doris');
-var people = [james, nancy, doris];
+// var james = new Person('james');
+// var nancy = new Person('nancy');
+// var doris = new Person('doris');
+// var people = [james, nancy, doris];
 
-people.forEach(function (person){
-    person.on('speak', function(mssg){
-        console.log(person.name + ' said: ' + mssg);
-    });
-});
+// people.forEach(function (person){
+//     person.on('speak', function(mssg){
+//         console.log(person.name + ' said: ' + mssg);
+//     });
+// });
 
-james.emit('speak', 'hey dudes');
-nancy.emit('speak', 'I want a curry!');
+// james.emit('speak', 'hey dudes');
+// nancy.emit('speak', 'I want a curry!');
+
+
+// READING & WRITING FILES ON THE COMPUTER
+
+var fs = require('fs');
+
+// Synchronous method for reading & writing files
+var readMe = fs.readFileSync('read.txt', 'utf8');
+fs.writeFileSync('writeMe.txt', readMe);
 
 
 
+// code
 
 
 
