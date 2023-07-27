@@ -88,21 +88,24 @@
 // var fs = require('fs');
 
 // Synchronous method for reading & writing files
-// var readMe = fs.readFileSync('read.txt', 'utf8');
+// var readMe = fs.readFileSync('readMee.txt', 'utf8');
 // fs.writeFileSync('writeMe.txt', readMe);
 
 // Asynchronous method for writing & reading files
+// var fs = require('fs');
+
+// fs.readFile('readMee.txt', 'utf8', function(err, data){
+//     fs.writeFile('writeMe.txt', data);
+// });
+
+// CREATING &REMOVING DIRECTORIES oR FOLDER
 var fs = require('fs');
 
-fs.readFile('read.txt', 'utf8', function(err, data){
-    fs.writeFile('writeMe.txt', data);
-});
+// synchronous way of creating & removing directories
+// fs.mkdirSync('stuff');
+// fs.rmdirSync('stuff');
 
-
-
-
-// code
-
+// Asynchronous way of creating&removing directories
 
 
 
