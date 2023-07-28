@@ -140,25 +140,25 @@
 
 // removing directories asynchronously
 // New way to remove directories
-const fs = require('fs');
-const { promisify } = require('util');
+// const fs = require('fs');
+// const { promisify } = require('util');
 
-const unlinkPromise = promisify(fs.unlink);
-const rmdirPromise = promisify(fs.rmdir);
+// const unlinkPromise = promisify(fs.unlink);
+// const rmdirPromise = promisify(fs.rmdir);
 
-(async function () {
-    try {
-      // Remove the 'writeMe.txt' file
-      await unlinkPromise('./stuff/writeMe.txt');
-      console.log('writeMe.txt removed.');
+// (async function () {
+//     try {
+//       // Remove the 'writeMe.txt' file
+//       await unlinkPromise('./stuff/writeMe.txt');
+//       console.log('writeMe.txt removed.');
 
-      // Remove the 'stuff' directory
-      await rmdirPromise('stuff');
-      console.log('stuff directory removed.');
-    } catch (err) {
-      console.error('Error:', err);
-    }
-  })();
+//       // Remove the 'stuff' directory
+//       await rmdirPromise('stuff');
+//       console.log('stuff directory removed.');
+//     } catch (err) {
+//       console.error('Error:', err);
+//     }
+//   })();
 
 
 //   Old way of removing directories asynchronously
