@@ -137,45 +137,36 @@
 //  }
 
 
-// New way to create a new file 2
-// const fs = require('fs');
-
-// async function createDirectoryAndCopyFile() {
-//   try {
-//     // Create the 'stuff' directory
-//     await fs.promises.mkdir('stuff');
-
-//     // Read the contents of 'readMe.txt'
-//     const data = await fs.promises.readFile('readMe.txt', 'utf8');
-
-//     // Write the contents to 'writeMe.txt' inside the 'stuff' directory
-//     await fs.promises.writeFile('./stuff/writeMe.txt', data);
-
-//     console.log('File copied successfully!');
-//   } catch (err) {
-//     console.error('Error:', err.message);
-//   }
-// }
-
-// createDirectoryAndCopyFile();
 
 // removing directories asynchronously
-
+// New way to remove directories
 const fs = require('fs');
+const { promisify } = require('util');
 
-fs.unlink('./stuff/writeMe.txt', function(err) {
-    if (err) {
-        console.error('Error deleting the file:', err);
-    } else {
-        fs.rmdir('stuff', function(err) {
-            if (err) {
-                console.error('Error removing the directory:', err);
-            } else {
-                console.log('File and directory deleted successfully.');
-            }
-        });
+const unlinkPromise = promisify(fs.unlink);
+const rmdirPromise = promisify(fs.rmdir);
+
+(async function () {
+    try {
+      // Remove the 'writeMe.txt' file
+      await unlinkPromise('./stuff/writeMe.txt');
+      console.log('writeMe.txt removed.');
+
+      // Remove the 'stuff' directory
+      await rmdirPromise('stuff');
+      console.log('stuff directory removed.');
+    } catch (err) {
+      console.error('Error:', err);
     }
-});
+  })();
+
+
+//   Old way of removing directories asynchronously
+// const fs = require('fs');
+
+fs.unlink('./stuff/writeMe.txt', function(){
+    fs.rmdir('stuff');
+})
 
 
 
