@@ -169,6 +169,12 @@
 // })
 
 // CLIENTS & SERVERS
+// Creating a Server
+var http = require('http');
+
+var server = http.createServer(function(req, res){
+
+});
 
 
 
