@@ -164,9 +164,9 @@
 //   Old way of removing directories asynchronously
 // const fs = require('fs');
 
-fs.unlink('./stuff/writeMe.txt', function(){
-    fs.rmdir('stuff');
-})
+// fs.unlink('./stuff/writeMe.txt', function(){
+//     fs.rmdir('stuff');
+// })
 
 
 
