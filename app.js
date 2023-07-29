@@ -184,7 +184,8 @@
 var http = require('http');
 var fs = require('fs');
 
-var myReadStream = fs.createReadStream();
+var myReadStream = fs.createReadStream(__dirname + '/readMe.txt');
+
 
 
 
