@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/NancyAsiuloka/Learning-Node-Basics/issues"
   },
-  "homepage": "https://github.com/NancyAsiuloka/Learning-Node-Basics#readme"
+  "homepage": "https://github.com/NancyAsiuloka/Learning-Node-Basics#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
