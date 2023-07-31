@@ -277,6 +277,7 @@ console.log('yo dawgs, now listening to port 3000');
 
 // THE NODE PACKAGE MANAGER (npm)
 // PACKAGE.JSON FILE
+// INSTALLING NODEMON
 
 
 
