@@ -322,18 +322,23 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html');
+    res.render('index');
 });
 
 app.get('/contact', function (req, res) {
-    res.sendFile(__dirname + '/contact.html');
+    res.render('contact');
 });
 
 app.get('/profile/:name', function (req, res) {
-    res.send('You requested to see a profile with the id of ' + req.params.name);
+    var data = {age: 23, job: 'Ninja', hobbies: ['eating', 'reading', 'dancing']};
+    res.render('profile', {person:req.params.name, data: data});
 })
 
 app.listen(3000);
+
+// PARTIAL VIEWS
+// SERVING STATIC FILES(&MIDDLEWARE)
+
 
 
 
