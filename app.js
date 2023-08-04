@@ -338,6 +338,7 @@ app.get('/contact', function (req, res) {
 // handling a post request using a middleware(urlencodedParser)
 app.post('/contact',urlencodedParser, function (req, res) {
     console.log(req.body);
+    // creating success page when the form is successfully submitted
     res.render('contact-success', {data: req.body});
 });
 
