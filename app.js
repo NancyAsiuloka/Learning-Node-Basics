@@ -335,7 +335,7 @@ app.get('/contact', function (req, res) {
     res.render('contact', {qs: req.query});
 });
 
-// handling a post request
+// handling a post request using a middleware(urlencodedParser)
 app.post('/contact',urlencodedParser, function (req, res) {
     console.log(req.body);
     res.render('contact-success', {data: req.body});
@@ -343,6 +343,7 @@ app.post('/contact',urlencodedParser, function (req, res) {
 
 app.get('/profile/:name', function (req, res) {
     var data = {age: 23, job: 'Ninja', hobbies: ['eating', 'reading', 'dancing']};
+    // passing data to the view using the render method
     res.render('profile', {person:req.params.name, data: data});
 })
 
