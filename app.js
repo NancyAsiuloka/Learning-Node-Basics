@@ -322,6 +322,8 @@ var app = express();
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 app.set('view engine', 'ejs');
+
+// middleware
 app.use('/assets', express.static('assets'));
 
 
